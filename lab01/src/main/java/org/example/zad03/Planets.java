@@ -1,4 +1,4 @@
-package org.example;
+package org.example.zad03;
 
 public enum Planets {
     MERCURY,
