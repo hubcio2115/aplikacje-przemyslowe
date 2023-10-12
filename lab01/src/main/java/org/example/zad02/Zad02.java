@@ -1,4 +1,4 @@
-package org.example;
+package org.example.zad02;
 
 import java.util.Arrays;
 

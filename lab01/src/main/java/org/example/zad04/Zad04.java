@@ -1,4 +1,4 @@
-package org.example;
+package org.example.zad04;
 
 public class Zad04 {
   public static void zad04(int n) {
