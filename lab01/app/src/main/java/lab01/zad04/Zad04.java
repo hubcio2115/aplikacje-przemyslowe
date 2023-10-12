@@ -1,6 +1,12 @@
 package lab01.zad04;
 
 public class Zad04 {
+  private static final String DEFAULT_PATTERN = "x";
+
+  public static String printPattern(int n) {
+    return printPattern(DEFAULT_PATTERN, n);
+  }
+
   public static String printPattern(String pattern, int n) {
     var result = new StringBuilder();
 
