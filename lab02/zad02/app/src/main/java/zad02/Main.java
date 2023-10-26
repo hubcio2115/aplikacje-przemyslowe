@@ -7,12 +7,17 @@ public class Main {
   public static void main(String[] args) {
     double[] data = {1.0, 2.0, 3.0, 4.0, 5.0};
 
-    double mean = ComputeStats.calculate(data, ComputeStats.TypeOfCompute.MEAN);
-    double stdDev = ComputeStats.calculate(data, ComputeStats.TypeOfCompute.STANDARD_DEVIATION);
-    double variance = ComputeStats.calculate(data, ComputeStats.TypeOfCompute.VARIANCE);
+    double expectedMean = ComputeStats.calculate(data, ComputeStats.TypeOfCompute.MEAN);
+    double expectedStdDev =
+        ComputeStats.calculate(data, ComputeStats.TypeOfCompute.STANDARD_DEVIATION);
+    double expectedVariance = ComputeStats.calculate(data, ComputeStats.TypeOfCompute.VARIANCE);
 
-    System.out.println("Średnia arytmetyczna: " + mean);
-    System.out.println("Odchylenie standardowe: " + stdDev);
-    System.out.println("Wariancja: " + variance);
+    final double actualMean = 3.0;
+    final double actualStdDev = 1.5811388300841898;
+    final double actualVariance = 2.5;
+
+    System.out.printf("Test Średnia: %s\n", expectedMean == actualMean);
+    System.out.printf("Test Wariancja: %s\n", expectedVariance == actualVariance);
+    System.out.printf("Test Odchylenie standardowe: %s\n", expectedStdDev == actualStdDev);
   }
 }
