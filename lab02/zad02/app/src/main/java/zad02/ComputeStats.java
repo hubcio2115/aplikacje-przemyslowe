@@ -2,7 +2,7 @@ package zad02;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
-public class Compute {
+public class ComputeStats {
   public enum TypeOfCompute {
     MEAN,
     STANDARD_DEVIATION,

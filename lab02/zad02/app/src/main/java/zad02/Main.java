@@ -7,9 +7,9 @@ public class Main {
   public static void main(String[] args) {
     double[] data = {1.0, 2.0, 3.0, 4.0, 5.0};
 
-    double mean = Compute.calculate(data, Compute.TypeOfCompute.MEAN);
-    double stdDev = Compute.calculate(data, Compute.TypeOfCompute.STANDARD_DEVIATION);
-    double variance = Compute.calculate(data, Compute.TypeOfCompute.VARIANCE);
+    double mean = ComputeStats.calculate(data, ComputeStats.TypeOfCompute.MEAN);
+    double stdDev = ComputeStats.calculate(data, ComputeStats.TypeOfCompute.STANDARD_DEVIATION);
+    double variance = ComputeStats.calculate(data, ComputeStats.TypeOfCompute.VARIANCE);
 
     System.out.println("Średnia arytmetyczna: " + mean);
     System.out.println("Odchylenie standardowe: " + stdDev);
