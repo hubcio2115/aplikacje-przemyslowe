@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="person1" class="com.example.zad1.domains.Person">
+    <bean id="pracownik" class="com.example.zad2.domains.Person">
         <constructor-arg name="id" value="9b5f0046-61ca-45c5-b3d1-eb8a1cb6fba7"/>
         <constructor-arg name="name" value="Michael"/>
         <constructor-arg name="lastname" value="Johnson"/>

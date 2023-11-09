@@ -1,14 +1,11 @@
-package com.example.zad1.domains;
-
-import org.springframework.stereotype.Component;
-
+package com.example.zad2.domains;
 
 public class Person {
-  private String id;
-  private String name;
-  private String lastname;
-  private String email;
-  private int dateOfBirth;
+  private final String id;
+  private final String name;
+  private final String lastname;
+  private final String email;
+  private final int dateOfBirth;
 
   public Person(String id, String name, String lastname, String email, int dateOfBirth) {
     this.id = id;
