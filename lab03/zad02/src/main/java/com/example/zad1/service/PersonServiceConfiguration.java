@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.example.zad1.domains")
+@ComponentScan("com.example.zad1.service")
 public class PersonServiceConfiguration {
   @Bean
   Person prezes() {
@@ -18,15 +18,5 @@ public class PersonServiceConfiguration {
   Person wiceprezes() {
     return new Person(
         "0e07f3ff-5ac0-4290-b1a7-e08e7d35b601", "Jane", "Doe", "jane.doe@example.com", 1982);
-  }
-
-  @Bean
-  Person sekretarz() {
-    return new Person(
-        "9b5f0046-61ca-45c5-b3d1-eb8a1cb6fba7",
-        "Michael",
-        "Johnson",
-        "michael.johnson@example.com",
-        1990);
   }
 }

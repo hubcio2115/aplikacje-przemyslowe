@@ -2,12 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    
+
     <bean id="person1" class="com.example.zad1.domains.Person">
-        <constructor-arg name="id" value="d3499999-24d0-4e07-bdb7-90b775a83210"/>
-        <constructor-arg name="name" value="Emily"/>
-        <constructor-arg name="lastname" value="Williams"/>
-        <constructor-arg name="email" value="emily.williams@example.com"/>
-        <constructor-arg name="dateOfBirth" value="1988"/>
+        <constructor-arg name="id" value="9b5f0046-61ca-45c5-b3d1-eb8a1cb6fba7"/>
+        <constructor-arg name="name" value="Michael"/>
+        <constructor-arg name="lastname" value="Johnson"/>
+        <constructor-arg name="email" value="michael.johnson@example.com"/>
+        <constructor-arg name="dateOfBirth" value="1990"/>
     </bean>
 </beans>
