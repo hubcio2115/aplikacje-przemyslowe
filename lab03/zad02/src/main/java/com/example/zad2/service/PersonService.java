@@ -19,14 +19,6 @@ public class PersonService {
     this.people = people;
   }
 
-  public Person getPrezes() {
-    return prezes;
-  }
-
-  public Person getWiceprezes() {
-    return wiceprezes;
-  }
-
   @Override
   public String toString() {
     return String.format(
