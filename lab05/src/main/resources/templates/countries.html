@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All countries</title>
+</head>
+<body>
+<form action="http://localhost:8080/api/countries/" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" required name="name">
+
+    <label for="gdp">GDP</label>
+    <input type="number" min="0" id="gdp" required name="gdp">
+
+    <label for="area">Area</label>
+    <input type="number" min="0" id="area" required name="area">
+
+    <label for="population">Population</label>
+    <input type="number" min="0" id="population" required name="population">
+
+    <button type="submit">Add New Country</button>
+</form>
+
+<div th:each="country : ${countries}">
+    <div th:text="${country.id}"></div>
+    <div th:text="${country.name}"></div>
+    <div th:text="${country.gdp}"></div>
+    <button th:onclick="deleteCountry(${country.id})" th:href="@{/countries/delete/{id}(id=${country.id})}">Delete</button>
+    <a th:href="@{/countries/{id}(id=${country.id})}">Edit</a>
+</div>
+
+<script>
+    async function deleteCountry(id) {
+        try {
+            await fetch(`http://localhost:8080/countries${id}`, {method: "DELETE"})
+        } catch (e) {
+            console.error(e)
+        }
+    }
+</script>
+</body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form onsubmit="onSubmit(event)" id="myForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" th:value="${country.name()}" required name="name">
+
+    <label for="gdp">GDP</label>
+    <input type="number" min="0" id="gdp" th:value="${country.gdp()}" required name="gdp">
+
+    <label for="area">Area</label>
+    <input type="number" min="0" id="area" th:value="${country.area()}" required name="area">
+
+    <label for="population">Population</label>
+    <input type="number" min="0" id="population" th:value="${country.population()}" required name="population">
+
+    <button type="submit">Update Country</button>
+</form>
+
+<script>
+    async function onSubmit(e) {
+        e.preventDefault();
+
+        const $form = document.getElementsByTagName("form")[0];
+
+        const data = {
+            name: $form.elements[0].value,
+            gdp: +$form.elements[1].value,
+            area: +$form.elements[2].value,
+            population: +$form.elements[3].value,
+        }
+
+        const id = window.location.pathname.split("/")[2];
+
+        console.log(id)
+
+        try {
+            const res = await fetch(`http://localhost:8080/api/countries/${id}`, {
+                method: "PUT",
+                body: JSON.stringify(data),
+                headers: {"Content-Type": "application/json"}
+            });
+
+            if (res.ok) window.location.reload();
+        } catch (e) {
+            console.error(e)
+        }
+    }
+</script>
+</body>
+</html>
