@@ -1,6 +1,5 @@
 package zad1.controllers.api;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import zad1.domains.Country;
 import zad1.domains.CountryDTO;
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.UUID;
 
 @RestController
