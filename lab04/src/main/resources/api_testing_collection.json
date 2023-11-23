@@ -1,0 +1,490 @@
+{
+  "info": {
+    "_postman_id": "ff0344ee-f1fe-4c25-a764-77883e11e070",
+    "name": "API testing basics",
+    "description": "# 🧪 Get started here\n\nPostman's powerful [scripting feature](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) helps you to write a range of API tests in JavaScript, including integration, regression, and contract tests.\n\nThis template demonstrates how to work with the Postman basic test syntax to test a single HTTP API request.\n\n## 🔖 How to use this template?\n\n#### Step 1: Send requests\n\nSend the sample requests and view the response and test results.\n\n#### Step 2: Update the sample request URL\n\nReplace the sample request URLs with your desired API endpoints.\n\n#### Step 3: Customize tests\n\nCustomize the tests in the \"Tests\" tab if needed. Don't forget to save your changes.\n\n## 💪 Quick tips for writing tests\n\n- Organize your test scenarios by grouping your requests in [collections](https://www.getpostman.com/docs/v6/postman/collections/intro_to_collections) and [folders](https://www.getpostman.com/docs/v6/postman/collections/managing_collections#adding-folders), and naming them descriptively\n- Document your API’s requirements using [markdown in the descriptions](https://www.getpostman.com/docs/v6/postman/collections/using_markdown_for_descriptions)\n- Use [variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables) to simulate more sophisticated user flows\n- Common tests that will be run after every request can be added to collection-level tests or folder-level tests\n    \n\n## 💡Related templates\n\n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)  \n[REST API basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=ddb19591-3097-41cf-82af-c84273e56719&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)  \n[Integration testing](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=fe506090-ca91-4340-bea9-82d2c3d2bb9a&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)  \n[Regression testing](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=7ab0f80e-a964-46ee-b948-4a4e3a85809c&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24341350"
+  },
+  "item": [
+    {
+      "name": "API tests",
+      "item": [
+        {
+          "name": "get all",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"response is ok\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/countries",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "countries"
+              ]
+            },
+            "description": "This test is to validate the response status code. This Snippet is also available on the right sidebar under `Status code: Code in 200`."
+          },
+          "response": [
+            {
+              "name": "get all",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/countries",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "countries"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 15 Nov 2023 13:45:42 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"37f8cf1e-5205-4660-9d18-eff1f63874d1\": {\n        \"id\": \"37f8cf1e-5205-4660-9d18-eff1f63874d1\",\n        \"name\": \"Iceland\",\n        \"gdp\": 21170648528,\n        \"area\": 103000,\n        \"population\": 343599\n    },\n    \"894a661e-7ec0-4c3d-bc90-cd5d659ac8f8\": {\n        \"id\": \"894a661e-7ec0-4c3d-bc90-cd5d659ac8f8\",\n        \"name\": \"Colombia\",\n        \"gdp\": 309185015273,\n        \"area\": 1141748,\n        \"population\": 50882891\n    },\n    \"fd83167a-627c-4b73-91e5-5a01a3d7f238\": {\n        \"id\": \"fd83167a-627c-4b73-91e5-5a01a3d7f238\",\n        \"name\": \"Greece\",\n        \"gdp\": 203814652993,\n        \"area\": 131957,\n        \"population\": 10423054\n    },\n    \"f41aa994-7578-401a-a5a9-b8c4ee04ee04\": {\n        \"id\": \"f41aa994-7578-401a-a5a9-b8c4ee04ee04\",\n        \"name\": \"Guatemala\",\n        \"gdp\": 78311985535,\n        \"area\": 108889,\n        \"population\": 18090729\n    },\n    \"c9c6e4a3-be17-4b34-b720-994dfc9d6aa0\": {\n        \"id\": \"c9c6e4a3-be17-4b34-b720-994dfc9d6aa0\",\n        \"name\": \"Argentina\",\n        \"gdp\": 384373834717,\n        \"area\": 2780400,\n        \"population\": 45195777\n    },\n    \"53965aa4-9892-4387-9447-d53de9ad730d\": {\n        \"id\": \"53965aa4-9892-4387-9447-d53de9ad730d\",\n        \"name\": \"Central African Republic\",\n        \"gdp\": 2487204376,\n        \"area\": 622984,\n        \"population\": 4829767\n    },\n    \"d8fdc8bc-3212-48a8-bce5-236895af0a52\": {\n        \"id\": \"d8fdc8bc-3212-48a8-bce5-236895af0a52\",\n        \"name\": \"Belgium\",\n        \"gdp\": 535007050436,\n        \"area\": 30528,\n        \"population\": 11589623\n    },\n    \"fcdc9147-fb23-4c5d-ab38-e43b34439aef\": {\n        \"id\": \"fcdc9147-fb23-4c5d-ab38-e43b34439aef\",\n        \"name\": \"Lesotho\",\n        \"gdp\": 2803625122,\n        \"area\": 30355,\n        \"population\": 2142252\n    },\n    \"c8e75c44-9ad7-4d04-b298-834023a2ed12\": {\n        \"id\": \"c8e75c44-9ad7-4d04-b298-834023a2ed12\",\n        \"name\": \"Bahamas\",\n        \"gdp\": 12515345432,\n        \"area\": 13880,\n        \"population\": 393244\n    },\n    \"e0972118-73ef-41e1-a3a4-818ea47b9c87\": {\n        \"id\": \"e0972118-73ef-41e1-a3a4-818ea47b9c87\",\n        \"name\": \"Albania\",\n        \"gdp\": 15834685687,\n        \"area\": 28748,\n        \"population\": 2877797\n    },\n    \"8954dcb6-e196-4b3a-9605-58e24fef1286\": {\n        \"id\": \"8954dcb6-e196-4b3a-9605-58e24fef1286\",\n        \"name\": \"Fiji\",\n        \"gdp\": 5309243159,\n        \"area\": 18274,\n        \"population\": 896445\n    },\n    \"2d39d03c-8108-4c55-b6cd-d018ca9630c6\": {\n        \"id\": \"2d39d03c-8108-4c55-b6cd-d018ca9630c6\",\n        \"name\": \"Germany\",\n        \"gdp\": 4257234310936,\n        \"area\": 357022,\n        \"population\": 83900473\n    },\n    \"8ef93a1f-9d76-4e79-b598-b719025afff2\": {\n        \"id\": \"8ef93a1f-9d76-4e79-b598-b719025afff2\",\n        \"name\": \"Benin\",\n        \"gdp\": 11183771367,\n        \"area\": 114763,\n        \"population\": 12280196\n    },\n    \"9016a17b-fe45-441d-b224-59dc000b56dc\": {\n        \"id\": \"9016a17b-fe45-441d-b224-59dc000b56dc\",\n        \"name\": \"Holy See\",\n        \"gdp\": 202138387,\n        \"area\": 0,\n        \"population\": 801\n    },\n    \"3a282f0e-8c09-4202-b943-c096aa3dc80a\": {\n        \"id\": \"3a282f0e-8c09-4202-b943-c096aa3dc80a\",\n        \"name\": \"Libya\",\n        \"gdp\": 42747797276,\n        \"area\": 1759540,\n        \"population\": 6871292\n    },\n    \"2eb34cb2-cedf-4c24-ad99-c29289b085e6\": {\n        \"id\": \"2eb34cb2-cedf-4c24-ad99-c29289b085e6\",\n        \"name\": \"Cuba\",\n        \"gdp\": 100912263940,\n        \"area\": 110861,\n        \"population\": 11326616\n    },\n    \"34422491-680c-4098-8b6a-50973495faee\": {\n        \"id\": \"34422491-680c-4098-8b6a-50973495faee\",\n        \"name\": \"Comoros\",\n        \"gdp\": 1174510072,\n        \"area\": 1861,\n        \"population\": 869601\n    },\n    \"b3ec0cfb-7f15-41e2-a9c6-3356b386b167\": {\n        \"id\": \"b3ec0cfb-7f15-41e2-a9c6-3356b386b167\",\n        \"name\": \"Estonia\",\n        \"gdp\": 36321039478,\n        \"area\": 64589,\n        \"population\": 1326535\n    },\n    \"1abadb73-e876-481e-af81-07a722c542a7\": {\n        \"id\": \"1abadb73-e876-481e-af81-07a722c542a7\",\n        \"name\": \"Israel\",\n        \"gdp\": 395452482532,\n        \"area\": 20770,\n        \"population\": 8789774\n    },\n    \"2dfaef2c-3955-42cd-80fc-62afa9edab9d\": {\n        \"id\": \"2dfaef2c-3955-42cd-80fc-62afa9edab9d\",\n        \"name\": \"Finland\",\n        \"gdp\": 285899665716,\n        \"area\": 338424,\n        \"population\": 5540720\n    },\n    \"777099f4-6e16-4b84-827b-6479827a4930\": {\n        \"id\": \"777099f4-6e16-4b84-827b-6479827a4930\",\n        \"name\": \"Brunei\",\n        \"gdp\": 13156726054,\n        \"area\": 5765,\n        \"population\": 437479\n    },\n    \"421ac9d4-1708-4945-b617-574dfa2b85d2\": {\n        \"id\": \"421ac9d4-1708-4945-b617-574dfa2b85d2\",\n        \"name\": \"Cyprus\",\n        \"gdp\": 29141130858,\n        \"area\": 9251,\n        \"population\": 1207359\n    },\n    \"f981d086-4ad2-41de-a07f-b52a25ff0579\": {\n        \"id\": \"f981d086-4ad2-41de-a07f-b52a25ff0579\",\n        \"name\": \"Eritrea\",\n        \"gdp\": 2923305501,\n        \"area\": 117600,\n        \"population\": 3546427\n    },\n    \"5d786700-ed13-431e-8229-f29a837f62ab\": {\n        \"id\": \"5d786700-ed13-431e-8229-f29a837f62ab\",\n        \"name\": \"Belarus\",\n        \"gdp\": 54473624059,\n        \"area\": 207600,\n        \"population\": 9449323\n    },\n    \"600cccd3-5060-4b44-965a-6bd94d8af1f4\": {\n        \"id\": \"600cccd3-5060-4b44-965a-6bd94d8af1f4\",\n        \"name\": \"Liberia\",\n        \"gdp\": 3473072430,\n        \"area\": 111369,\n        \"population\": 5057681\n    },\n    \"a9e9c971-1e25-4f84-a152-dff60957aa5d\": {\n        \"id\": \"a9e9c971-1e25-4f84-a152-dff60957aa5d\",\n        \"name\": \"Belize\",\n        \"gdp\": 1913143846,\n        \"area\": 22966,\n        \"population\": 397621\n    },\n    \"e516c5f8-bc90-4a82-87fd-6563415d091c\": {\n        \"id\": \"e516c5f8-bc90-4a82-87fd-6563415d091c\",\n        \"name\": \"Egypt\",\n        \"gdp\": 362875764399,\n        \"area\": 1002450,\n        \"population\": 104258327\n    },\n    \"07235aed-6e43-426e-8af7-a5f5df352d11\": {\n        \"id\": \"07235aed-6e43-426e-8af7-a5f5df352d11\",\n        \"name\": \"Guyana\",\n        \"gdp\": 5906710724,\n        \"area\": 214969,\n        \"population\": 788072\n    },\n    \"8eabe91a-fabb-492e-b814-ec922443898b\": {\n        \"id\": \"8eabe91a-fabb-492e-b814-ec922443898b\",\n        \"name\": \"Bangladesh\",\n        \"gdp\": 328087486964,\n        \"area\": 147570,\n        \"population\": 164689383\n    },\n    \"7392a65b-45c4-47f1-a5b4-2df48a55f8d0\": {\n        \"id\": \"7392a65b-45c4-47f1-a5b4-2df48a55f8d0\",\n        \"name\": \"Kiribati\",\n        \"gdp\": 184632212,\n        \"area\": 811,\n        \"population\": 119877\n    },\n    \"384a0fc2-6d22-42af-a0a5-db3596dac069\": {\n        \"id\": \"384a0fc2-6d22-42af-a0a5-db3596dac069\",\n        \"name\": \"Guinea\",\n        \"gdp\": 12702355806,\n        \"area\": 245857,\n        \"population\": 13132792\n    },\n    \"d20203aa-ff6c-4483-861a-7d7c1756b28d\": {\n        \"id\": \"d20203aa-ff6c-4483-861a-7d7c1756b28d\",\n        \"name\": \"Barbados\",\n        \"gdp\": 5303621762,\n        \"area\": 430,\n        \"population\": 287375\n    },\n    \"29f43d1b-49cf-49cb-a69d-688d552c13cc\": {\n        \"id\": \"29f43d1b-49cf-49cb-a69d-688d552c13cc\",\n        \"name\": \"Gambia\",\n        \"gdp\": 2512985083,\n        \"area\": 10689,\n        \"population\": 2416664\n    },\n    \"fc28bcec-4576-494d-9537-65d3279044cd\": {\n        \"id\": \"fc28bcec-4576-494d-9537-65d3279044cd\",\n        \"name\": \"Angola\",\n        \"gdp\": 103785223221,\n        \"area\": 1246700,\n        \"population\": 32866268\n    },\n    \"d3d2c805-bdf5-47cd-bece-da9497bd6a5a\": {\n        \"id\": \"d3d2c805-bdf5-47cd-bece-da9497bd6a5a\",\n        \"name\": \"Hungary\",\n        \"gdp\": 169801662430,\n        \"area\": 93028,\n        \"population\": 9660351\n    },\n    \"422c6ddc-9b64-4a24-8e6a-963a97d4a9f9\": {\n        \"id\": \"422c6ddc-9b64-4a24-8e6a-963a97d4a9f9\",\n        \"name\": \"Algeria\",\n        \"gdp\": 172781904767,\n        \"area\": 2381741,\n        \"population\": 43851044\n    },\n    \"8f2b769d-036f-4788-a3f4-80715f4231e4\": {\n        \"id\": \"8f2b769d-036f-4788-a3f4-80715f4231e4\",\n        \"name\": \"Andorra\",\n        \"gdp\": 3010989423,\n        \"area\": 468,\n        \"population\": 77265\n    },\n    \"332464c7-ab19-4683-bb55-5a7cfca399a9\": {\n        \"id\": \"332464c7-ab19-4683-bb55-5a7cfca399a9\",\n        \"name\": \"Jamaica\",\n        \"gdp\": 15443023884,\n        \"area\": 10991,\n        \"population\": 2961167\n    },\n    \"75c06d02-cbae-4921-a93f-73bfa865b8da\": {\n        \"id\": \"75c06d02-cbae-4921-a93f-73bfa865b8da\",\n        \"name\": \"Croatia\",\n        \"gdp\": 55489204179,\n        \"area\": 56594,\n        \"population\": 4105267\n    },\n    \"e32bb2e1-8297-4990-86f5-d6f07b964d47\": {\n        \"id\": \"e32bb2e1-8297-4990-86f5-d6f07b964d47\",\n        \"name\": \"Liechtenstein\",\n        \"gdp\": 7115846417,\n        \"area\": 160,\n        \"population\": 39486\n    },\n    \"598d97bd-e4cb-4b92-947d-ae3331cc4665\": {\n        \"id\": \"598d97bd-e4cb-4b92-947d-ae3331cc4665\",\n        \"name\": \"Burundi\",\n        \"gdp\": 3452956469,\n        \"area\": 27834,\n        \"population\": 11890784\n    },\n    \"cf3cbba5-373d-4be1-a65c-6c6eeace7fb9\": {\n        \"id\": \"cf3cbba5-373d-4be1-a65c-6c6eeace7fb9\",\n        \"name\": \"Dominican Republic\",\n        \"gdp\": 89629922113,\n        \"area\": 48671,\n        \"population\": 10847910\n    },\n    \"528aa318-10d8-43a9-b6f4-95b507dbc3bd\": {\n        \"id\": \"528aa318-10d8-43a9-b6f4-95b507dbc3bd\",\n        \"name\": \"Gabon\",\n        \"gdp\": 16426417857,\n        \"area\": 267668,\n        \"population\": 2254126\n    },\n    \"8de2dc2b-0de1-44b1-8d56-08a864f435ce\": {\n        \"id\": \"8de2dc2b-0de1-44b1-8d56-08a864f435ce\",\n        \"name\": \"Austria\",\n        \"gdp\": 474132511167,\n        \"area\": 83879,\n        \"population\": 9021973\n    },\n    \"ad76b739-6330-4506-bbff-3fd9fb32eee2\": {\n        \"id\": \"ad76b739-6330-4506-bbff-3fd9fb32eee2\",\n        \"name\": \"Azerbaijan\",\n        \"gdp\": 45504569561,\n        \"area\": 86600,\n        \"population\": 10139177\n    },\n    \"3b53a6a9-4759-4a66-a87f-20f9ee2ddded\": {\n        \"id\": \"3b53a6a9-4759-4a66-a87f-20f9ee2ddded\",\n        \"name\": \"Luxembourg\",\n        \"gdp\": 72321540969,\n        \"area\": 2586,\n        \"population\": 634814\n    },\n    \"bc74b6a2-d059-477f-9f5b-8bffc83a9276\": {\n        \"id\": \"bc74b6a2-d059-477f-9f5b-8bffc83a9276\",\n        \"name\": \"Bahrain\",\n        \"gdp\": 41055072129,\n        \"area\": 760,\n        \"population\": 1701575\n    },\n    \"caf5c9a2-ec03-478e-89cc-9b51eb0887e8\": {\n        \"id\": \"caf5c9a2-ec03-478e-89cc-9b51eb0887e8\",\n        \"name\": \"Armenia\",\n        \"gdp\": 12811212198,\n        \"area\": 29743,\n        \"population\": 2963243\n    },\n    \"b4fb65d7-444b-4bb1-b1e9-946feec957fb\": {\n        \"id\": \"b4fb65d7-444b-4bb1-b1e9-946feec957fb\",\n        \"name\": \"Bulgaria\",\n        \"gdp\": 64839410868,\n        \"area\": 110879,\n        \"population\": 6927288\n    },\n    \"47ef540a-0f82-48f6-965c-8fa71fb28762\": {\n        \"id\": \"47ef540a-0f82-48f6-965c-8fa71fb28762\",\n        \"name\": \"Indonesia\",\n        \"gdp\": 1075365898350,\n        \"area\": 1904569,\n        \"population\": 273523621\n    },\n    \"6e53ec36-5cf0-43df-98b2-01bbe7204f18\": {\n        \"id\": \"6e53ec36-5cf0-43df-98b2-01bbe7204f18\",\n        \"name\": \"Haiti\",\n        \"gdp\": 8620234516,\n        \"area\": 27750,\n        \"population\": 11541526\n    },\n    \"1d352f36-48cd-4309-abeb-d89578846304\": {\n        \"id\": \"1d352f36-48cd-4309-abeb-d89578846304\",\n        \"name\": \"Ethiopia\",\n        \"gdp\": 109221817227,\n        \"area\": 1104300,\n        \"population\": 118796341\n    },\n    \"cd7e7f88-17b7-4264-82cc-1e22f791967d\": {\n        \"id\": \"cd7e7f88-17b7-4264-82cc-1e22f791967d\",\n        \"name\": \"Antigua and Barbuda\",\n        \"gdp\": 1796736591,\n        \"area\": 442,\n        \"population\": 97928\n    },\n    \"faff310b-150c-4a7b-885b-e45fbbd6bd7c\": {\n        \"id\": \"faff310b-150c-4a7b-885b-e45fbbd6bd7c\",\n        \"name\": \"Denmark\",\n        \"gdp\": 354565186792,\n        \"area\": 42433,\n        \"population\": 5792202\n    },\n    \"d7bfc8f4-ae16-4902-9f65-70e00d261ad6\": {\n        \"id\": \"d7bfc8f4-ae16-4902-9f65-70e00d261ad6\",\n        \"name\": \"Jordan\",\n        \"gdp\": 43800319563,\n        \"area\": 89342,\n        \"population\": 10203134\n    },\n    \"51a14215-b80a-4ede-a30a-2d9cdecc9d37\": {\n        \"id\": \"51a14215-b80a-4ede-a30a-2d9cdecc9d37\",\n        \"name\": \"Madagascar\",\n        \"gdp\": 14210570342,\n        \"area\": 587041,\n        \"population\": 27691019\n    },\n    \"b26c9f92-88f2-40e0-bc7e-6e7d3f7712b5\": {\n        \"id\": \"b26c9f92-88f2-40e0-bc7e-6e7d3f7712b5\",\n        \"name\": \"Guinea-Bissau\",\n        \"gdp\": 1560700832,\n        \"area\": 36125,\n        \"population\": 2015275\n    },\n    \"ac9f0a2b-da1e-4479-8089-7740aa51e928\": {\n        \"id\": \"ac9f0a2b-da1e-4479-8089-7740aa51e928\",\n        \"name\": \"Japan\",\n        \"gdp\": 5563921636816,\n        \"area\": 377975,\n        \"population\": 125710000\n    },\n    \"6aa84f72-399e-4844-b728-ed51db6c154b\": {\n        \"id\": \"6aa84f72-399e-4844-b728-ed51db6c154b\",\n        \"name\": \"Kuwait\",\n        \"gdp\": 116231450964,\n        \"area\": 17818,\n        \"population\": 4270571\n    },\n    \"e0f5e92a-3d7b-4d94-97f4-1e3218df564d\": {\n        \"id\": \"e0f5e92a-3d7b-4d94-97f4-1e3218df564d\",\n        \"name\": \"Brazil\",\n        \"gdp\": 1679705631786,\n        \"area\": 8515767,\n        \"population\": 213993437\n    },\n    \"d9b6f5b8-c01a-4c20-bf98-7f05132b3e5d\": {\n        \"id\": \"d9b6f5b8-c01a-4c20-bf98-7f05132b3e5d\",\n        \"name\": \"Costa Rica\",\n        \"gdp\": 61440350368,\n        \"area\": 51100,\n        \"population\": 5094118\n    },\n    \"cc877393-9833-49b1-94be-ead771a68e2d\": {\n        \"id\": \"cc877393-9833-49b1-94be-ead771a68e2d\",\n        \"name\": \"Ecuador\",\n        \"gdp\": 63007515132,\n        \"area\": 276841,\n        \"population\": 17643060\n    },\n    \"5c2cb2a4-fcee-4298-8870-5904c976100a\": {\n        \"id\": \"5c2cb2a4-fcee-4298-8870-5904c976100a\",\n        \"name\": \"Lebanon\",\n        \"gdp\": 29405260799,\n        \"area\": 10452,\n        \"population\": 6825442\n    },\n    \"be04ebcd-fe2e-44ed-9dff-71b839433d81\": {\n        \"id\": \"be04ebcd-fe2e-44ed-9dff-71b839433d81\",\n        \"name\": \"Bolivia\",\n        \"gdp\": 41003165252,\n        \"area\": 1098581,\n        \"population\": 11673029\n    },\n    \"2ae87aa8-d265-4e10-8068-285491aca347\": {\n        \"id\": \"2ae87aa8-d265-4e10-8068-285491aca347\",\n        \"name\": \"Equatorial Guinea\",\n        \"gdp\": 14603455417,\n        \"area\": 28051,\n        \"population\": 1402985\n    },\n    \"8c95a5eb-af5c-45aa-8363-a43792099ec1\": {\n        \"id\": \"8c95a5eb-af5c-45aa-8363-a43792099ec1\",\n        \"name\": \"Honduras\",\n        \"gdp\": 25524978239,\n        \"area\": 112492,\n        \"population\": 10010603\n    },\n    \"1f741016-afd2-4c92-809e-56fa74efff65\": {\n        \"id\": \"1f741016-afd2-4c92-809e-56fa74efff65\",\n        \"name\": \"Kyrgyzstan\",\n        \"gdp\": 8799338821,\n        \"area\": 199951,\n        \"population\": 6628647\n    },\n    \"59039aaf-0ad7-4cf1-a292-003143656777\": {\n        \"id\": \"59039aaf-0ad7-4cf1-a292-003143656777\",\n        \"name\": \"Bosnia and Herzegovina\",\n        \"gdp\": 20796107813,\n        \"area\": 51209,\n        \"population\": 3278252\n    },\n    \"6c898185-5b61-4292-8de0-d21ca897eda9\": {\n        \"id\": \"6c898185-5b61-4292-8de0-d21ca897eda9\",\n        \"name\": \"Burkina Faso\",\n        \"gdp\": 16335781805,\n        \"area\": 274200,\n        \"population\": 20903278\n    },\n    \"a9faa116-7263-4d1d-b102-99011712d98f\": {\n        \"id\": \"a9faa116-7263-4d1d-b102-99011712d98f\",\n        \"name\": \"Cambodia\",\n        \"gdp\": 30785403178,\n        \"area\": 181035,\n        \"population\": 16943141\n    },\n    \"a9b48a3f-7cdf-406f-b357-94087452586d\": {\n        \"id\": \"a9b48a3f-7cdf-406f-b357-94087452586d\",\n        \"name\": \"Iran\",\n        \"gdp\": 642276668556,\n        \"area\": 1648195,\n        \"population\": 84465620\n    },\n    \"fc8ac22d-3c5a-403c-b2c2-325100286529\": {\n        \"id\": \"fc8ac22d-3c5a-403c-b2c2-325100286529\",\n        \"name\": \"Australia\",\n        \"gdp\": 1527031655361,\n        \"area\": 7692024,\n        \"population\": 25788201\n    },\n    \"62719c45-2718-45f1-802b-31d88d623468\": {\n        \"id\": \"62719c45-2718-45f1-802b-31d88d623468\",\n        \"name\": \"Iraq\",\n        \"gdp\": 195533578229,\n        \"area\": 438317,\n        \"population\": 41222440\n    },\n    \"f2aa4646-afa8-44d0-ac39-10f18d6a69a2\": {\n        \"id\": \"f2aa4646-afa8-44d0-ac39-10f18d6a69a2\",\n        \"name\": \"China\",\n        \"gdp\": 16943848501424,\n        \"area\": 9596961,\n        \"population\": 1444216107\n    },\n    \"cb340b46-c76e-4256-a750-63bbc008d3c8\": {\n        \"id\": \"cb340b46-c76e-4256-a750-63bbc008d3c8\",\n        \"name\": \"Eswatini (fmr. \\\"Swaziland\\\")\",\n        \"gdp\": 4946734113,\n        \"area\": 17364,\n        \"population\": 1160164\n    },\n    \"3528c486-7b04-4a03-b80c-b690d7c5dc33\": {\n        \"id\": \"3528c486-7b04-4a03-b80c-b690d7c5dc33\",\n        \"name\": \"Kenya\",\n        \"gdp\": 95736414494,\n        \"area\": 580367,\n        \"population\": 54985620\n    },\n    \"9f512db7-23cb-4e9c-8e26-fd4afae17b06\": {\n        \"id\": \"9f512db7-23cb-4e9c-8e26-fd4afae17b06\",\n        \"name\": \"Canada\",\n        \"gdp\": 1713187343049,\n        \"area\": 9976140,\n        \"population\": 37742154\n    },\n    \"a9d19024-4269-4bab-9f89-ac2201311a36\": {\n        \"id\": \"a9d19024-4269-4bab-9f89-ac2201311a36\",\n        \"name\": \"Latvia\",\n        \"gdp\": 36321039478,\n        \"area\": 64589,\n        \"population\": 1886202\n    },\n    \"ccb3bd84-e12c-42b0-84b6-d18cdeb4b43d\": {\n        \"id\": \"ccb3bd84-e12c-42b0-84b6-d18cdeb4b43d\",\n        \"name\": \"Laos\",\n        \"gdp\": 19409304579,\n        \"area\": 236800,\n        \"population\": 7275560\n    },\n    \"d24703d5-34f2-43ce-b223-3df42dd47cbb\": {\n        \"id\": \"d24703d5-34f2-43ce-b223-3df42dd47cbb\",\n        \"name\": \"Chile\",\n        \"gdp\": 257050317102,\n        \"area\": 756096,\n        \"population\": 19116201\n    },\n    \"b696a50e-6611-4f5a-98cf-308d9bfa9eb4\": {\n        \"id\": \"b696a50e-6611-4f5a-98cf-308d9bfa9eb4\",\n        \"name\": \"Ghana\",\n        \"gdp\": 68938282107,\n        \"area\": 238535,\n        \"population\": 31561278\n    },\n    \"0469a011-7b74-408b-bab6-62b5cd96542a\": {\n        \"id\": \"0469a011-7b74-408b-bab6-62b5cd96542a\",\n        \"name\": \"Ireland\",\n        \"gdp\": 458976930646,\n        \"area\": 70273,\n        \"population\": 4977400\n    },\n    \"d2b26459-0791-4545-a8eb-f228131f8f25\": {\n        \"id\": \"d2b26459-0791-4545-a8eb-f228131f8f25\",\n        \"name\": \"Lithuania\",\n        \"gdp\": 60000000000,\n        \"area\": 65300,\n        \"population\": 2689536\n    },\n    \"eade9388-6b3b-496d-8106-38c665aef44d\": {\n        \"id\": \"eade9388-6b3b-496d-8106-38c665aef44d\",\n        \"name\": \"Georgia\",\n        \"gdp\": 18046935807,\n        \"area\": 69700,\n        \"population\": 3989167\n    },\n    \"9629b014-cc97-4de2-9337-70f82988a9d5\": {\n        \"id\": \"9629b014-cc97-4de2-9337-70f82988a9d5\",\n        \"name\": \"Djibouti\",\n        \"gdp\": 2356948393,\n        \"area\": 23180,\n        \"population\": 988000\n    },\n    \"a6c46b42-0938-4b11-bab2-5254cc1c3634\": {\n        \"id\": \"a6c46b42-0938-4b11-bab2-5254cc1c3634\",\n        \"name\": \"Afghanistan\",\n        \"gdp\": 20578965752,\n        \"area\": 652230,\n        \"population\": 38928346\n    },\n    \"e01d1405-52de-4899-9885-39a327dbd4bc\": {\n        \"id\": \"e01d1405-52de-4899-9885-39a327dbd4bc\",\n        \"name\": \"Grenada\",\n        \"gdp\": 1392615473,\n        \"area\": 344,\n        \"population\": 112519\n    },\n    \"1bababeb-5c75-49fe-a975-3726edf9d744\": {\n        \"id\": \"1bababeb-5c75-49fe-a975-3726edf9d744\",\n        \"name\": \"Chad\",\n        \"gdp\": 11511748936,\n        \"area\": 1284000,\n        \"population\": 16425864\n    },\n    \"1eb3ef99-2515-4bc3-9696-22d3a95706f3\": {\n        \"id\": \"1eb3ef99-2515-4bc3-9696-22d3a95706f3\",\n        \"name\": \"France\",\n        \"gdp\": 2767931350902,\n        \"area\": 551695,\n        \"population\": 67564251\n    },\n    \"b313140d-0ddf-4baf-a717-6171e99c26d9\": {\n        \"id\": \"b313140d-0ddf-4baf-a717-6171e99c26d9\",\n        \"name\": \"India\",\n        \"gdp\": 2875147166757,\n        \"area\": 3287263,\n        \"population\": 1393409038\n    },\n    \"9987ff89-9c1d-479c-91e8-6bc8eb86c246\": {\n        \"id\": \"9987ff89-9c1d-479c-91e8-6bc8eb86c246\",\n        \"name\": \"Cabo Verde\",\n        \"gdp\": 1967474831,\n        \"area\": 4033,\n        \"population\": 555987\n    },\n    \"5d19a909-eca0-4b79-8b15-3e1ebc2cc2ca\": {\n        \"id\": \"5d19a909-eca0-4b79-8b15-3e1ebc2cc2ca\",\n        \"name\": \"Kazakhstan\",\n        \"gdp\": 186183912294,\n        \"area\": 2724900,\n        \"population\": 18999700\n    },\n    \"9868a2a5-25c5-4828-b577-085e677cbce0\": {\n        \"id\": \"9868a2a5-25c5-4828-b577-085e677cbce0\",\n        \"name\": \"Botswana\",\n        \"gdp\": 15877657403,\n        \"area\": 581730,\n        \"population\": 2351627\n    },\n    \"ab326e06-fde4-4483-acd2-a9a04df8fb73\": {\n        \"id\": \"ab326e06-fde4-4483-acd2-a9a04df8fb73\",\n        \"name\": \"Dominica\",\n        \"gdp\": 561954083,\n        \"area\": 751,\n        \"population\": 71991\n    },\n    \"db624cdd-f847-4393-a8a4-cda485f97c7a\": {\n        \"id\": \"db624cdd-f847-4393-a8a4-cda485f97c7a\",\n        \"name\": \"El Salvador\",\n        \"gdp\": 26861834874,\n        \"area\": 21041,\n        \"population\": 6486205\n    },\n    \"3b6a9684-1fb7-493a-9130-a7ef25d2f642\": {\n        \"id\": \"3b6a9684-1fb7-493a-9130-a7ef25d2f642\",\n        \"name\": \"Cameroon\",\n        \"gdp\": 43382800321,\n        \"area\": 475442,\n        \"population\": 26545863\n    },\n    \"69bf94da-e4c1-4b8e-9597-b245c1ba83aa\": {\n        \"id\": \"69bf94da-e4c1-4b8e-9597-b245c1ba83aa\",\n        \"name\": \"Czechia (Czech Republic)\",\n        \"gdp\": 244186208221,\n        \"area\": 78867,\n        \"population\": 10708981\n    },\n    \"39264f5b-7055-4f8e-b970-d8669830e744\": {\n        \"id\": \"39264f5b-7055-4f8e-b970-d8669830e744\",\n        \"name\": \"Italy\",\n        \"gdp\": 1977517354890,\n        \"area\": 301340,\n        \"population\": 60367486\n    },\n    \"4aea5888-c16a-4aa2-844d-46f614aaec65\": {\n        \"id\": \"4aea5888-c16a-4aa2-844d-46f614aaec65\",\n        \"name\": \"Congo (Congo-Brazzaville)\",\n        \"gdp\": 11708911335,\n        \"area\": 342000,\n        \"population\": 5518092\n    },\n    \"8e66b5d4-1049-4ad5-849f-b75c7edad001\": {\n        \"id\": \"8e66b5d4-1049-4ad5-849f-b75c7edad001\",\n        \"name\": \"Bhutan\",\n        \"gdp\": 3050639487,\n        \"area\": 38394,\n        \"population\": 771608\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "get by id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"response is ok\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/countries/c0b75890-c109-4347-88fe-7ac10b034e55",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "countries",
+                "c0b75890-c109-4347-88fe-7ac10b034e55"
+              ]
+            },
+            "description": "This test is to validate the response status code. This Snippet is also available on the right sidebar under `Status code: Code in 200`."
+          },
+          "response": [
+            {
+              "name": "get by id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/countries/37f8cf1e-5205-4660-9d18-eff1f63874d1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "countries",
+                    "37f8cf1e-5205-4660-9d18-eff1f63874d1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 15 Nov 2023 13:46:22 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": \"37f8cf1e-5205-4660-9d18-eff1f63874d1\",\n    \"name\": \"Iceland\",\n    \"gdp\": 21170648528,\n    \"area\": 103000,\n    \"population\": 343599\n}"
+            }
+          ]
+        },
+        {
+          "name": "add one",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Poland\",\n    \"gdp\": 688180000000,\n    \"area\": 312722,\n    \"population\": 40725624\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/countries",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "countries"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "add",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Poland\",\n    \"gdp\": 688180000000,\n    \"area\": 312722,\n    \"population\": 40725624\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/countries/37f8cf1e-5205-4660-9d18-eff1f63874d1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "countries",
+                    "37f8cf1e-5205-4660-9d18-eff1f63874d1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 15 Nov 2023 13:48:56 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": \"7b0fcf57-803f-4786-9b0f-34202bf4f7ab\",\n    \"name\": \"Poland\",\n    \"gdp\": 688180000000,\n    \"area\": 312722,\n    \"population\": 40725624\n}"
+            }
+          ]
+        },
+        {
+          "name": "replace one",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Poland\",\n    \"gdp\": 688180000001,\n    \"area\": 312722,\n    \"population\": 40725624\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/countries/761d5342-4ef6-43ea-9a03-782b51febd1e",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "countries",
+                "761d5342-4ef6-43ea-9a03-782b51febd1e"
+              ]
+            },
+            "description": "This test is to validate the response time. This Snippet is also available on the right sidebar under `Response time is less than 200ms`."
+          },
+          "response": [
+            {
+              "name": "replace one",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Poland\",\n    \"gdp\": 688180000001,\n    \"area\": 312722,\n    \"population\": 40725624\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/countries/761d5342-4ef6-43ea-9a03-782b51febd1e",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "countries",
+                    "761d5342-4ef6-43ea-9a03-782b51febd1e"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 15 Nov 2023 13:56:06 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": \"761d5342-4ef6-43ea-9a03-782b51febd1e\",\n    \"name\": \"Poland\",\n    \"gdp\": 688180000001,\n    \"area\": 312722,\n    \"population\": 40725624\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete one",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"response is ok\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "let jsonResponse = pm.response.json();",
+                  "",
+                  "pm.test(\"Response should be a parsable JSON\", function() {",
+                  "    pm.expect(jsonResponse).to.be.ok;",
+                  "});",
+                  "",
+                  "pm.test(\"Response body should be an object\", function() {",
+                  "    pm.expect(jsonResponse).to.be.an('object');",
+                  "});",
+                  "",
+                  "pm.test(\"Response body should be in the correct format\", function() {",
+                  "    pm.expect(jsonResponse.args).to.be.a('object');",
+                  "    pm.expect(jsonResponse.data).to.be.a('string');",
+                  "    pm.expect(jsonResponse.files).to.be.a('object');",
+                  "    pm.expect(jsonResponse.form).to.be.a('object');",
+                  "    pm.expect(jsonResponse.headers).to.be.a('object');",
+                  "});",
+                  "",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/countries/761d5342-4ef6-43ea-9a03-782b51febd1e",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "countries",
+                "761d5342-4ef6-43ea-9a03-782b51febd1e"
+              ]
+            },
+            "description": "This test is written to demonstrate how to bundle several assertions within a single test."
+          },
+          "response": [
+            {
+              "name": "delete one",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/countries/761d5342-4ef6-43ea-9a03-782b51febd1e",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "countries",
+                    "761d5342-4ef6-43ea-9a03-782b51febd1e"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 15 Nov 2023 13:56:14 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": \"761d5342-4ef6-43ea-9a03-782b51febd1e\",\n    \"name\": \"Poland\",\n    \"gdp\": 688180000001,\n    \"area\": 312722,\n    \"population\": 40725624\n}"
+            }
+          ]
+        }
+      ],
+      "description": "This folder contains examples of testing a single HTTP API request.\n\nIn the Postman app, under the \"Tests\" tab for each request, notice the test(s) written to validate specific assertions. Some of these tests are available as a \"Snippet\" on the right sidebar.\n\nSend each request to see the results under the \"Test Results\" tab in the response viewer.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}
