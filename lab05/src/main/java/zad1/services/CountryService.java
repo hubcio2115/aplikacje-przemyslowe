@@ -6,22 +6,23 @@ import zad1.domains.CountryDTO;
 
 import java.util.Map;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
 public class CountryService {
-  private final Map<String, Country> countries;
+  private final Map<UUID, Country> countries;
 
-  public CountryService(Map<String, Country> countries) {
+  public CountryService(Map<UUID, Country> countries) {
     this.countries = countries;
   }
 
-  public Map<String, Country> getCountries() {
+  public Map<UUID, Country> getCountries() {
     return countries;
   }
 
   public Country getById(UUID id) throws NoSuchElementException {
-    var result = this.countries.get(id.toString());
+    var result = this.countries.get(id);
 
     if (result == null) throw new CountryNotFoundException(id);
     return result;
@@ -36,12 +37,12 @@ public class CountryService {
             newCountry.area(),
             newCountry.population());
 
-    this.countries.put(country.id().toString(), country);
+    this.countries.put(country.id(), country);
 
     return country;
   }
 
-  public Country put(UUID id, CountryDTO newCountry) {
+  public void put(UUID id, CountryDTO newCountry) {
     var country =
             new Country(
                     id,
@@ -50,12 +51,10 @@ public class CountryService {
                     newCountry.area(),
                     newCountry.population());
 
-    this.countries.put(country.id().toString(), country);
-
-    return country;
+    this.countries.put(country.id(), country);
   }
 
-  public Country delete(UUID id) {
-    return this.countries.remove(id.toString());
+  public Optional<Country> delete(UUID id) {
+    return Optional.ofNullable(this.countries.remove(id));
   }
 }

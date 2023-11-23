@@ -13,12 +13,13 @@ import zad1.services.CSVParser;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Map;
+import java.util.UUID;
 
 @Configuration
 public class CountryServiceConfiguration {
   @Bean
   @Qualifier("countries")
-  public Map<String, Country> peopleFromCSV(@Value("${countries.csv.file}") String csvFilePath)
+  public Map<UUID, Country> peopleFromCSV(@Value("${countries.csv.file}") String csvFilePath)
       throws IOException, CsvException {
     var resource = new ClassPathResource(csvFilePath);
 

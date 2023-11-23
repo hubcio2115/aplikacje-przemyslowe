@@ -9,9 +9,9 @@ import java.util.Map;
 import java.util.UUID;
 
 public class CSVParser {
-  public static Map<String, Country> parse(com.opencsv.CSVReader reader)
+  public static Map<UUID, Country> parse(com.opencsv.CSVReader reader)
       throws IOException, CsvException {
-    var result = new HashMap<String, Country>();
+    var result = new HashMap<UUID, Country>();
 
     for (String[] row : reader.readAll()) {
       var id = UUID.randomUUID();
@@ -19,7 +19,7 @@ public class CSVParser {
           new Country(
               id, row[1], Long.parseLong(row[2]), Long.parseLong(row[3]), Long.parseLong(row[4]));
 
-      result.put(id.toString(), country);
+      result.put(id, country);
     }
 
     return result;
