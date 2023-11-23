@@ -4,14 +4,14 @@ import zad1.domains.Country;
 import com.opencsv.exceptions.CsvException;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class CSVParser {
   public static Map<UUID, Country> parse(com.opencsv.CSVReader reader)
       throws IOException, CsvException {
-    var result = new HashMap<UUID, Country>();
+    var result = new ConcurrentHashMap<UUID, Country>();
 
     for (String[] row : reader.readAll()) {
       var id = UUID.randomUUID();
