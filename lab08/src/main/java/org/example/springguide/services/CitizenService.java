@@ -1,5 +1,6 @@
 package org.example.springguide.services;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.example.springguide.domains.citizen.Citizen;
 import org.example.springguide.repositories.CitizenRepository;
