@@ -2,6 +2,7 @@ package org.example.springguide.services;
 
 import jakarta.transaction.Transactional;
 import org.example.springguide.domains.country.Country;
+import org.example.springguide.domains.country.CountryDTO;
 import org.example.springguide.repositories.CountryRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,12 +20,21 @@ public class CountryService {
   }
 
   @Transactional
-  public Optional<Country> getById(long id) {
+  public Optional<Country> findById(long id) {
     return this.countryRepository.findById(id);
   }
 
-  public Country addCountry(Country newCountry) {
-    return this.countryRepository.save(newCountry);
+  @Transactional
+  public Country addCountry(CountryDTO newCountry) {
+    var country =
+        Country.builder()
+            .name(newCountry.name())
+            .gdp(newCountry.gdp())
+            .isInEurope(newCountry.isInEurope())
+            .formationYear(newCountry.formationYear())
+            .build();
+
+    return this.countryRepository.save(country);
   }
 
   public Optional<Country> deleteById(long id) {
@@ -39,9 +49,7 @@ public class CountryService {
       boolean withRuler,
       Year formationYear,
       boolean descending,
-      int pageNumber) {
-    Pageable pageable = Pageable.ofSize(10).withPage(pageNumber);
-
+      Pageable pageable) {
     if (withRuler)
       return this.countryRepository.findWithRuler(
           name, isInEurope, formationYear, descending, pageable);

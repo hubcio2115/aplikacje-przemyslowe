@@ -25,4 +25,8 @@ public class CitizenService {
         citizen.ifPresent(this.citizenRepository::delete);
         return citizen;
     }
+
+    public Iterable<Citizen> findFromACountry(long countryId) {
+        return this.citizenRepository.findAllFromACountry(countryId);
+    }
 }

@@ -1,5 +1,7 @@
 package org.example.springguide.domains.country;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,26 +21,35 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class Country implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
 
-    private String name;
+  private String name;
 
-    private long gdp;
+  private long gdp;
 
-    @Column(name = "is_in_europe")
-    private boolean isInEurope;
+  @Column(name = "is_in_europe")
+  private boolean isInEurope;
 
-    @Column(name = "formation_year")
-    private Year formationYear;
+  @Column(name = "formation_year")
+  private Year formationYear;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
-    private Ruler ruler;
+  @OneToOne(fetch = FetchType.LAZY, mappedBy = "country", cascade = CascadeType.ALL)
+  @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+  private Ruler ruler;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
-    private Set<City> cities;
+  @OneToMany(
+      fetch = FetchType.LAZY,
+      mappedBy = "country",
+      cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH})
+  @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+  private Set<City> cities;
 
-    @ManyToMany(mappedBy = "countries", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
-    private Set<Citizen> citizens;
+  @ManyToMany(
+      fetch = FetchType.LAZY,
+      mappedBy = "countries",
+      cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH})
+  @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+  private Set<Citizen> citizens;
 }

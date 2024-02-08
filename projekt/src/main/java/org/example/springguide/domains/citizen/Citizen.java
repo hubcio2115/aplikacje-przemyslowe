@@ -1,5 +1,8 @@
 package org.example.springguide.domains.citizen;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,23 +20,30 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class Citizen implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private String name;
+  private String name;
 
-    @Column(name = "last_name")
-    private String lastName;
+  @Column(name = "last_name")
+  private String lastName;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
-    @JoinTable(
-            name = "country_citizen",
-            joinColumns = @JoinColumn(name = "country_id"),
-            inverseJoinColumns = @JoinColumn(name = "citizen_id")
-    )
-    private Set<Country> countries;
+  @ManyToMany(
+      fetch = FetchType.EAGER,
+      cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH})
+  @JoinTable(
+      name = "country_citizen",
+      joinColumns = @JoinColumn(name = "country_id"),
+      inverseJoinColumns = @JoinColumn(name = "citizen_id"))
+  @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+  private Set<Country> countries;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "citizen", cascade = CascadeType.ALL, optional = false)
-    private Passport passport;
+  @OneToOne(
+      fetch = FetchType.LAZY,
+      mappedBy = "citizen",
+      cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH},
+      optional = false)
+  @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+  private Passport passport;
 }

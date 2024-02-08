@@ -22,12 +22,12 @@ React/Angular/Vue). Naszym zadaniem jest zaprojektowanie, zaimplementowanie i pr
   wykorzystaniem różnych wartości trybutów CascadeType i FetchType
 - [x] repozytoria wg potrzeb
 - [x] serwisy - (min. 2 serwisy dla dwóch klas dziedzinowych głównej i wybranej pobocznej)
-    - [ ] dla klasy głównej i jednej pobocznej implementujemy rozbudowaną logikę biznesową, która wykorzystuje 2 lub
+    - [x] dla klasy głównej i jednej pobocznej implementujemy rozbudowaną logikę biznesową, która wykorzystuje 2 lub
       więcej repozytoriów
-    - [ ] zaprojektować metody biznesowe tak aby były implementowane przy wykorzystaniu
+    - [x] zaprojektować metody biznesowe tak aby były implementowane przy wykorzystaniu
         - [x] konwencji `findBy`
-        - [ ] zapytań w języku JPQL z użyciem `JOIN`, agregujace (na min. ocenę dobrą) z wykorzystaniem `GROUP BY`, itp.
-        - [ ] zaptyań typu native query (dla celów poznwczych) (na min. ocenę dobrą)
+        - [x] zapytań w języku JPQL z użyciem `JOIN`, agregujace (na min. ocenę dobrą) z wykorzystaniem `GROUP BY`, itp.
+        - [x] zaptyań typu native query (dla celów poznwczych) (na min. ocenę dobrą)
 - [x] kontrolery - wszystkie operacje biznesowe mają odzwierciedlenie w kontrolerach (pamietać o prawidłowej obsłudze
   żądań
   HTTP z uwzględnieniem semantyki HTTP i wzroca REST, response code odpowiednim do sytuacji)

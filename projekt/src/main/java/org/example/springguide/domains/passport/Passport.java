@@ -1,5 +1,8 @@
 package org.example.springguide.domains.passport;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,14 +18,15 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 public class Passport implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Column(name = "serial_number")
-    private String serialNumber;
+  @Column(name = "serial_number")
+  private String serialNumber;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "citizen_id")
-    private Citizen citizen;
+  @OneToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.ALL)
+  @JoinColumn(name = "citizen_id")
+  @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+  private Citizen citizen;
 }
