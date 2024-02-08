@@ -1,1 +1,1651 @@
-{"item":[{"name":"api","description":"","item":[{"name":"rulers","description":"","item":[{"id":"18888e6f-a34c-4477-8da0-a5b2dd5e7a2d","name":"add Ruler","request":{"name":"add Ruler","description":{},"url":{"path":["api","rulers"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"*/*"}],"method":"POST","body":{"mode":"raw","raw":"{\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\"\n}","options":{"raw":{"headerFamily":"json","language":"json"}}},"auth":null},"response":[{"id":"7f0806ad-3b3b-4d1a-ad96-37448425d13c","name":"OK","originalRequest":{"url":{"path":["api","rulers"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"*/*"}],"method":"POST","body":{"mode":"raw","raw":"{\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\"\n}","options":{"raw":{"headerFamily":"json","language":"json"}}}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\",\n  \"country\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"gdp\": \"<long>\",\n    \"formationYear\": {\n      \"value\": \"<integer>\",\n      \"leap\": \"<boolean>\"\n    },\n    \"ruler\": {\n      \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n    },\n    \"cities\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      }\n    ],\n    \"citizens\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      }\n    ],\n    \"inEurope\": \"<boolean>\"\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"name":"{id}","description":"","item":[{"id":"f494d6c3-61de-4f45-a692-85c4055ce2ed","name":"get Ruler By Id","request":{"name":"get Ruler By Id","description":{},"url":{"path":["api","rulers",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{},"auth":null},"response":[{"id":"1925e16c-9086-49ef-ba86-9048a825fab8","name":"OK","originalRequest":{"url":{"path":["api","rulers",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\",\n  \"country\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"gdp\": \"<long>\",\n    \"formationYear\": {\n      \"value\": \"<integer>\",\n      \"leap\": \"<boolean>\"\n    },\n    \"ruler\": {\n      \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n    },\n    \"cities\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      }\n    ],\n    \"citizens\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      }\n    ],\n    \"inEurope\": \"<boolean>\"\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"id":"427264ce-7cf3-47df-8a6e-7a0ea0b0aaf8","name":"delete Ruler","request":{"name":"delete Ruler","description":{},"url":{"path":["api","rulers",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{},"auth":null},"response":[{"id":"d85b1c68-6d6c-4f08-b509-863f756d824d","name":"OK","originalRequest":{"url":{"path":["api","rulers",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\",\n  \"country\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"gdp\": \"<long>\",\n    \"formationYear\": {\n      \"value\": \"<integer>\",\n      \"leap\": \"<boolean>\"\n    },\n    \"ruler\": {\n      \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n    },\n    \"cities\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      }\n    ],\n    \"citizens\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      }\n    ],\n    \"inEurope\": \"<boolean>\"\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}}]}]},{"name":"passports","description":"","item":[{"id":"768593de-6c40-4ba0-b69e-3ea0257986d0","name":"add Passport","request":{"name":"add Passport","description":{},"url":{"path":["api","passports"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"*/*"}],"method":"POST","body":{"mode":"raw","raw":"{\n  \"serialNumber\": \"<string>\"\n}","options":{"raw":{"headerFamily":"json","language":"json"}}},"auth":null},"response":[{"id":"d9b04adb-f23e-4346-92af-1f3218f3d448","name":"OK","originalRequest":{"url":{"path":["api","passports"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"*/*"}],"method":"POST","body":{"mode":"raw","raw":"{\n  \"serialNumber\": \"<string>\"\n}","options":{"raw":{"headerFamily":"json","language":"json"}}}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"serialNumber\": \"<string>\",\n  \"citizen\": {\n    \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"name":"{id}","description":"","item":[{"id":"2004c46f-9e94-4dd4-80c5-d20c452495fa","name":"get Passport By Id","request":{"name":"get Passport By Id","description":{},"url":{"path":["api","passports",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{},"auth":null},"response":[{"id":"2838a527-d7bd-4dd8-99f9-9b4e837dc14b","name":"OK","originalRequest":{"url":{"path":["api","passports",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"serialNumber\": \"<string>\",\n  \"citizen\": {\n    \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"id":"fe010baa-ef20-4f92-bd96-4ade5988f46e","name":"delete Passport","request":{"name":"delete Passport","description":{},"url":{"path":["api","passports",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{},"auth":null},"response":[{"id":"0ba3ecb9-2e8f-4acd-bf4e-73a7d06f4d45","name":"OK","originalRequest":{"url":{"path":["api","passports",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"serialNumber\": \"<string>\",\n  \"citizen\": {\n    \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}}]}]},{"name":"countries","description":"","item":[{"id":"d5ea529b-1c24-433e-b3fe-25e89f51adec","name":"add Country","request":{"name":"add Country","description":{},"url":{"path":["api","countries"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"*/*"}],"method":"POST","body":{"mode":"raw","raw":"{\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"isInEurope\": \"<boolean>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  }\n}","options":{"raw":{"headerFamily":"json","language":"json"}}},"auth":null},"response":[{"id":"f5acd080-2a96-4b05-930f-82d5ad5572d9","name":"OK","originalRequest":{"url":{"path":["api","countries"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"*/*"}],"method":"POST","body":{"mode":"raw","raw":"{\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"isInEurope\": \"<boolean>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  }\n}","options":{"raw":{"headerFamily":"json","language":"json"}}}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"name":"{id}","description":"","item":[{"id":"1b31d384-69a8-4189-99fa-a17166dac0f9","name":"get Country By Id","request":{"name":"get Country By Id","description":{},"url":{"path":["api","countries",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{},"auth":null},"response":[{"id":"169ab31e-df11-4008-ab9b-9ea9ad480eb8","name":"OK","originalRequest":{"url":{"path":["api","countries",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"id":"fef5d8ab-ffa5-4bac-8a98-44da36830df5","name":"delete Country","request":{"name":"delete Country","description":{},"url":{"path":["api","countries",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{},"auth":null},"response":[{"id":"1c49d7c3-4728-41d9-a44c-02518e5fb9c9","name":"OK","originalRequest":{"url":{"path":["api","countries",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}}]},{"name":"findByNameOrFormationYear","description":"","item":[{"id":"01580cd8-aee3-43e0-a40d-146fe3a40614","name":"get By Name Or Formation Year","request":{"name":"get By Name Or Formation Year","description":{},"url":{"path":["api","countries","findByNameOrFormationYear"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"name","value":"<string>"},{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"formationYear","value":"<string>"}],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{},"auth":null},"response":[{"id":"1ce3b897-2a97-4cd9-90e1-42492e416a18","name":"OK","originalRequest":{"url":{"path":["api","countries","findByNameOrFormationYear"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"name","value":"<string>"},{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"formationYear","value":"<string>"}],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}}]},{"name":"findByNameAndFormationYear","description":"","item":[{"id":"fca03a0a-9978-4c8c-8e72-584321aff478","name":"get By Name And Formation Year","request":{"name":"get By Name And Formation Year","description":{},"url":{"path":["api","countries","findByNameAndFormationYear"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"name","value":"<string>"},{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"formationYear","value":"<string>"}],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{},"auth":null},"response":[{"id":"69e5d3b8-f4b6-4bce-acd2-cd524e3a30aa","name":"OK","originalRequest":{"url":{"path":["api","countries","findByNameAndFormationYear"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"name","value":"<string>"},{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"formationYear","value":"<string>"}],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}}]},{"name":"all","description":"","item":[{"id":"8201867a-2779-492a-8e66-bec3a3d14ea4","name":"get All Countries","request":{"name":"get All Countries","description":{},"url":{"path":["api","countries","all"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{},"auth":null},"response":[{"id":"df5210be-5ea3-4162-b495-9a6fd4da7452","name":"OK","originalRequest":{"url":{"path":["api","countries","all"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"gdp\": \"<long>\",\n    \"formationYear\": {\n      \"value\": \"<integer>\",\n      \"leap\": \"<boolean>\"\n    },\n    \"ruler\": {\n      \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n    },\n    \"cities\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      }\n    ],\n    \"citizens\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      }\n    ],\n    \"inEurope\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"gdp\": \"<long>\",\n    \"formationYear\": {\n      \"value\": \"<integer>\",\n      \"leap\": \"<boolean>\"\n    },\n    \"ruler\": {\n      \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n    },\n    \"cities\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      }\n    ],\n    \"citizens\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      }\n    ],\n    \"inEurope\": \"<boolean>\"\n  }\n]","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}}]}]},{"name":"citizens","description":"","item":[{"id":"a8f30f65-362f-4703-9a40-7aca7cf85cac","name":"add Citizen","request":{"name":"add Citizen","description":{},"url":{"path":["api","citizens"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"name","value":"<string>"},{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"lastName","value":"<string>"}],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"POST","body":{},"auth":null},"response":[{"id":"5538a1ed-b3aa-4828-b154-8c4e70a399f1","name":"OK","originalRequest":{"url":{"path":["api","citizens"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"name","value":"<string>"},{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"key":"lastName","value":"<string>"}],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"POST","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"countries\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    }\n  ],\n  \"passport\": {\n    \"id\": \"<long>\",\n    \"serialNumber\": \"<string>\",\n    \"citizen\": {\n      \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n    }\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"name":"{id}","description":"","item":[{"id":"55590aa1-3690-4576-98e7-a3d1d93ba2c0","name":"get Citizen By Id","request":{"name":"get Citizen By Id","description":{},"url":{"path":["api","citizens",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{},"auth":null},"response":[{"id":"240a8c34-2753-4f01-ac50-b64b6605c8b1","name":"OK","originalRequest":{"url":{"path":["api","citizens",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"countries\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    }\n  ],\n  \"passport\": {\n    \"id\": \"<long>\",\n    \"serialNumber\": \"<string>\",\n    \"citizen\": {\n      \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n    }\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"id":"19b9078e-8dd8-4a85-b68b-0ad8cb45179a","name":"delete Citizen","request":{"name":"delete Citizen","description":{},"url":{"path":["api","citizens",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{},"auth":null},"response":[{"id":"57a34202-8c60-4ea1-957a-692a608ed311","name":"OK","originalRequest":{"url":{"path":["api","citizens",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"countries\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    }\n  ],\n  \"passport\": {\n    \"id\": \"<long>\",\n    \"serialNumber\": \"<string>\",\n    \"citizen\": {\n      \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n    }\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}}]}]},{"name":"cities","description":"","item":[{"id":"7a5e6a6c-c18f-4772-8e19-dfa281318123","name":"add City","request":{"name":"add City","description":{},"url":{"path":["api","cities"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"*/*"}],"method":"POST","body":{"mode":"raw","raw":"{\n  \"name\": \"<string>\"\n}","options":{"raw":{"headerFamily":"json","language":"json"}}},"auth":null},"response":[{"id":"7cad21bb-b4ab-4e47-92dd-5dba4f592bfd","name":"OK","originalRequest":{"url":{"path":["api","cities"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/json"},{"key":"Accept","value":"*/*"}],"method":"POST","body":{"mode":"raw","raw":"{\n  \"name\": \"<string>\"\n}","options":{"raw":{"headerFamily":"json","language":"json"}}}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"country\": {\n    \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"name":"{id}","description":"","item":[{"id":"f352a4ee-b499-4c85-bf4e-54d436636d91","name":"get City By Id","request":{"name":"get City By Id","description":{},"url":{"path":["api","cities",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{},"auth":null},"response":[{"id":"72db9386-29c8-4810-b71d-ca0b72de09fc","name":"OK","originalRequest":{"url":{"path":["api","cities",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"GET","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"country\": {\n    \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}},{"id":"d6523430-a888-4c64-b390-fe0b5c94ccb8","name":"delete City","request":{"name":"delete City","description":{},"url":{"path":["api","cities",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"type":"any","value":"<long>","key":"id","disabled":false,"description":{"content":"(Required) ","type":"text/plain"}}]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{},"auth":null},"response":[{"id":"ecdbe90a-765f-47fa-ab84-0f0d8875258e","name":"OK","originalRequest":{"url":{"path":["api","cities",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"*/*"}],"method":"DELETE","body":{}},"status":"OK","code":200,"header":[{"key":"Content-Type","value":"*/*"}],"body":"{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"country\": {\n    \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n  }\n}","cookie":[],"_postman_previewlanguage":"text"}],"event":[],"protocolProfileBehavior":{"disableBodyPruning":true}}]}]}]}],"event":[],"variable":[{"key":"baseUrl","value":"http://localhost:8080"}],"info":{"_postman_id":"88eec083-1113-487c-bffe-aa41a9791921","name":"OpenAPI definition","schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json","description":{"content":"","type":"text/plain"}}}
+{
+	"info": {
+		"_postman_id": "2abb8467-c4e3-4f3f-b1be-f52edbb01c12",
+		"name": "OpenAPI definition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24341350"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "rulers",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get Ruler By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/rulers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"rulers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/rulers/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"rulers",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\",\n  \"country\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"gdp\": \"<long>\",\n    \"formationYear\": {\n      \"value\": \"<integer>\",\n      \"leap\": \"<boolean>\"\n    },\n    \"ruler\": {\n      \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n    },\n    \"cities\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      }\n    ],\n    \"citizens\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      }\n    ],\n    \"inEurope\": \"<boolean>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "delete Ruler",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/rulers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"rulers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/rulers/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"rulers",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\",\n  \"country\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"gdp\": \"<long>\",\n    \"formationYear\": {\n      \"value\": \"<integer>\",\n      \"leap\": \"<boolean>\"\n    },\n    \"ruler\": {\n      \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n    },\n    \"cities\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      }\n    ],\n    \"citizens\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      }\n    ],\n    \"inEurope\": \"<boolean>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "add Ruler",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/rulers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"rulers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/rulers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"rulers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"surname\": \"<string>\",\n  \"officeStartDate\": \"<dateTime>\",\n  \"country\": {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"gdp\": \"<long>\",\n    \"formationYear\": {\n      \"value\": \"<integer>\",\n      \"leap\": \"<boolean>\"\n    },\n    \"ruler\": {\n      \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n    },\n    \"cities\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"country\": {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      }\n    ],\n    \"citizens\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"countries\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        ],\n        \"passport\": {\n          \"id\": \"<long>\",\n          \"serialNumber\": \"<string>\",\n          \"citizen\": {\n            \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n          }\n        }\n      }\n    ],\n    \"inEurope\": \"<boolean>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "passports",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get Passport By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/passports/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"passports",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/passports/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"passports",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"serialNumber\": \"<string>\",\n  \"citizen\": {\n    \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "delete Passport",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/passports/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"passports",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/passports/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"passports",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"serialNumber\": \"<string>\",\n  \"citizen\": {\n    \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "add Passport",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serialNumber\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/passports",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"passports"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"serialNumber\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/passports",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"passports"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"serialNumber\": \"<string>\",\n  \"citizen\": {\n    \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "countries",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "citizens",
+									"item": [
+										{
+											"name": "get Citizens",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/countries/:id/citizens",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"countries",
+														":id",
+														"citizens"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/countries/:id/citizens",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"countries",
+																":id",
+																"citizens"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "get Country By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/countries/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"countries",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/countries/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"countries",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete Country",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/countries/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"countries",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/countries/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"countries",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find",
+							"item": [
+								{
+									"name": "find",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/countries/find?name=&isInEurope=false&withRuler=false&formationYear=0&descending=false&page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"countries",
+												"find"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": ""
+												},
+												{
+													"key": "isInEurope",
+													"value": "false"
+												},
+												{
+													"key": "withRuler",
+													"value": "false"
+												},
+												{
+													"key": "formationYear",
+													"value": "0"
+												},
+												{
+													"key": "descending",
+													"value": "false"
+												},
+												{
+													"key": "page",
+													"value": "<integer>",
+													"description": "(Required) "
+												},
+												{
+													"key": "size",
+													"value": "<integer>",
+													"description": "(Required) "
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/countries/find?name=&isInEurope=false&withRuler=false&formationYear=0&descending=false&page=<integer>&size=<integer>&sort=<string>,<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"countries",
+														"find"
+													],
+													"query": [
+														{
+															"key": "name",
+															"value": ""
+														},
+														{
+															"key": "isInEurope",
+															"value": "false"
+														},
+														{
+															"key": "withRuler",
+															"value": "false"
+														},
+														{
+															"key": "formationYear",
+															"value": "0"
+														},
+														{
+															"key": "descending",
+															"value": "false"
+														},
+														{
+															"key": "page",
+															"value": "<integer>",
+															"description": "(Required) "
+														},
+														{
+															"key": "size",
+															"value": "<integer>",
+															"description": "(Required) "
+														},
+														{
+															"key": "sort",
+															"value": "<string>,<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"first\": \"<boolean>\",\n  \"last\": \"<boolean>\",\n  \"size\": \"<integer>\",\n  \"content\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"gdp\": \"<long>\",\n      \"formationYear\": {\n        \"value\": \"<integer>\",\n        \"leap\": \"<boolean>\"\n      },\n      \"ruler\": {\n        \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n      },\n      \"cities\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"country\": {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"country\": {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        }\n      ],\n      \"citizens\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"lastName\": \"<string>\",\n          \"countries\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n            }\n          ],\n          \"passport\": {\n            \"id\": \"<long>\",\n            \"serialNumber\": \"<string>\",\n            \"citizen\": {\n              \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n            }\n          }\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"lastName\": \"<string>\",\n          \"countries\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n            }\n          ],\n          \"passport\": {\n            \"id\": \"<long>\",\n            \"serialNumber\": \"<string>\",\n            \"citizen\": {\n              \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n            }\n          }\n        }\n      ],\n      \"inEurope\": \"<boolean>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"gdp\": \"<long>\",\n      \"formationYear\": {\n        \"value\": \"<integer>\",\n        \"leap\": \"<boolean>\"\n      },\n      \"ruler\": {\n        \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n      },\n      \"cities\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"country\": {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"country\": {\n            \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n          }\n        }\n      ],\n      \"citizens\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"lastName\": \"<string>\",\n          \"countries\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n            }\n          ],\n          \"passport\": {\n            \"id\": \"<long>\",\n            \"serialNumber\": \"<string>\",\n            \"citizen\": {\n              \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n            }\n          }\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\",\n          \"lastName\": \"<string>\",\n          \"countries\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n            }\n          ],\n          \"passport\": {\n            \"id\": \"<long>\",\n            \"serialNumber\": \"<string>\",\n            \"citizen\": {\n              \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n            }\n          }\n        }\n      ],\n      \"inEurope\": \"<boolean>\"\n    }\n  ],\n  \"number\": \"<integer>\",\n  \"sort\": {\n    \"empty\": \"<boolean>\",\n    \"sorted\": \"<boolean>\",\n    \"unsorted\": \"<boolean>\"\n  },\n  \"numberOfElements\": \"<integer>\",\n  \"pageable\": {\n    \"offset\": \"<long>\",\n    \"sort\": {\n      \"empty\": \"<boolean>\",\n      \"sorted\": \"<boolean>\",\n      \"unsorted\": \"<boolean>\"\n    },\n    \"paged\": \"<boolean>\",\n    \"unpaged\": \"<boolean>\",\n    \"pageNumber\": \"<integer>\",\n    \"pageSize\": \"<integer>\"\n  },\n  \"empty\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "findByNameOrFormationYear",
+							"item": [
+								{
+									"name": "get By Name Or Formation Year",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/countries/findByNameOrFormationYear?name=<string>&formationYear=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"countries",
+												"findByNameOrFormationYear"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "formationYear",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/countries/findByNameOrFormationYear?name=<string>&formationYear=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"countries",
+														"findByNameOrFormationYear"
+													],
+													"query": [
+														{
+															"key": "name",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "formationYear",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "findByNameAndFormationYear",
+							"item": [
+								{
+									"name": "get By Name And Formation Year",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/countries/findByNameAndFormationYear?name=<string>&formationYear=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"countries",
+												"findByNameAndFormationYear"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "formationYear",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/countries/findByNameAndFormationYear?name=<string>&formationYear=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"countries",
+														"findByNameAndFormationYear"
+													],
+													"query": [
+														{
+															"key": "name",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "formationYear",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get All Countries",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/countries",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"countries"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/countries",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"countries"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "add Country",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"isInEurope\": \"<boolean>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/countries",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"countries"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"isInEurope\": \"<boolean>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/countries",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"countries"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"gdp\": \"<long>\",\n  \"formationYear\": {\n    \"value\": \"<integer>\",\n    \"leap\": \"<boolean>\"\n  },\n  \"ruler\": {\n    \"value\": \"<Circular reference to #/components/schemas/Ruler detected>\"\n  },\n  \"cities\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"country\": {\n        \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n      }\n    }\n  ],\n  \"citizens\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"lastName\": \"<string>\",\n      \"countries\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n        }\n      ],\n      \"passport\": {\n        \"id\": \"<long>\",\n        \"serialNumber\": \"<string>\",\n        \"citizen\": {\n          \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n        }\n      }\n    }\n  ],\n  \"inEurope\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "citizens",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get Citizen By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/citizens/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"citizens",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/citizens/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"citizens",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"countries\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    }\n  ],\n  \"passport\": {\n    \"id\": \"<long>\",\n    \"serialNumber\": \"<string>\",\n    \"citizen\": {\n      \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "delete Citizen",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/citizens/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"citizens",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/citizens/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"citizens",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"countries\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    }\n  ],\n  \"passport\": {\n    \"id\": \"<long>\",\n    \"serialNumber\": \"<string>\",\n    \"citizen\": {\n      \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n    }\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "add Citizen",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/citizens?name=<string>&lastName=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"citizens"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "<string>",
+											"description": "(Required) "
+										},
+										{
+											"key": "lastName",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/citizens?name=<string>&lastName=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"citizens"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "lastName",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"countries\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n    }\n  ],\n  \"passport\": {\n    \"id\": \"<long>\",\n    \"serialNumber\": \"<string>\",\n    \"citizen\": {\n      \"value\": \"<Circular reference to #/components/schemas/Citizen detected>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cities",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get City By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/cities/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cities",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/cities/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"cities",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"country\": {\n    \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "delete City",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/cities/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cities",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/cities/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"cities",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"country\": {\n    \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "add City",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/cities",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"cities"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/cities",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cities"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"country\": {\n    \"value\": \"<Circular reference to #/components/schemas/Country detected>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
